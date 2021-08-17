@@ -3,23 +3,30 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          Logo
+          <Logo></Logo>
         </div>
         <div class="col-md-6 header__right">
-          menu
+          <Menu></Menu>
         </div>
       </div>
     </div>
   </header>
 </template>
 <script>
+import Menu from "../components/Menu.vue"
+import Logo from "../components/Logo.vue"
+
 export default {
   name: "Header",
+  components: {
+    Menu,
+    Logo,
+  },
 }
 </script>
 <style>
 .header {
-  background-color: rgb(91, 247, 195);
+  background-color: rgba(248, 246, 239, 0.733);
   height: 80px;
   width: 100%;
 }

@@ -1,16 +1,12 @@
 <template>
   <div>
-    <Header />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue"
 export default {
   name: "App",
-  components: {
-    Header,
-  },
 }
 </script>
 
@@ -98,5 +94,14 @@ body {
 }
 img {
   max-width: 100%;
+}
+
+@font-face {
+  font-family: Renner;
+  src: url("./assets/fontes/Renner_ 400 Book.ttf");
+}
+
+* {
+  font-family: Renner;
 }
 </style>
