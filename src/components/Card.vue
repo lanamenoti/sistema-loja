@@ -7,7 +7,7 @@
         <p>Valor: {{ preco }}</p>
       </div>
     </div>
-    <router-link to="/"
+    <router-link :to="{ name: 'produto.detalhe', params: { id: id } }"
       ><button class="card__botao">FAZER PEDIDO</button></router-link
     >
   </div>
@@ -16,6 +16,7 @@
 export default {
   name: "Card",
   props: {
+    id: Number,
     nome: String,
     imagem: Image,
     preco: Number,

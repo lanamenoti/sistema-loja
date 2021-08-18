@@ -20,6 +20,7 @@
           :key="produto.id"
         >
           <Card
+            :id="produto.id"
             :nome="produto.nome"
             :imagem="produto.imagem"
             :preco="produto.preco"
@@ -70,6 +71,30 @@ export default {
           nome: "Blusa 3",
           preco: 39.99,
           imagem: require("../assets/blusa_lindinha.jpg"),
+        },
+        {
+          id: 6,
+          nome: "Jeans Mom",
+          preco: 39.99,
+          imagem: require("../assets/jeans_mom.jpg"),
+        },
+        {
+          id: 7,
+          nome: "Blusa 3",
+          preco: 39.99,
+          imagem: require("../assets/blusa_lindinha.jpg"),
+        },
+        {
+          id: 8,
+          nome: "Blusa 2",
+          preco: 39.99,
+          imagem: require("../assets/blusa_friends.jpg"),
+        },
+        {
+          id: 9,
+          nome: "Jeans Mom",
+          preco: 39.99,
+          imagem: require("../assets/jeans_mom.jpg"),
         },
       ],
     }

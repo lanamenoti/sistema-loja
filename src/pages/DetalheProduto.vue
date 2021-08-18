@@ -1,20 +1,20 @@
 <template>
   <div>
     <Header></Header>
-    <Catalogo></Catalogo>
+    <Produto></Produto>
     <Footer></Footer>
   </div>
 </template>
 <script>
 import Header from "../components/Header.vue"
-import Catalogo from "../components/Catalogo.vue"
+import Produto from "../components/Produto.vue"
 import Footer from "../components/Footer.vue"
 
 export default {
-  name: "Home",
+  name: "DetalheProduto",
   components: {
     Header,
-    Catalogo,
+    Produto,
     Footer,
   },
 }
