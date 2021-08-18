@@ -87,7 +87,7 @@ body {
   box-sizing: border-box;
   padding: 0px 10px;
 }
-.col-md-12ß {
+.col-md-12 {
   width: calc(960px / 12 * 12);
   box-sizing: border-box;
   padding: 0px 10px;
@@ -102,6 +102,7 @@ img {
 }
 
 * {
+  box-sizing: border-box;
   font-family: Renner;
 }
 </style>

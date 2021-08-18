@@ -16,7 +16,6 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #e2e2e2;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -24,25 +23,30 @@ export default {
 }
 
 .menu ul li a {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
   padding: 4px 14px;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 0.5px;
   text-decoration: none;
-  color: #333;
+  color: rgb(209, 29, 29);
+  transition: background-color ease 0.8s;
 }
 
 .menu ul li :not(:last-child):after {
   content: "";
   display: inline-block;
   width: 1px;
-  background-color: #e2e2e2;
+  background-color: #333;
   height: 10px;
   margin-left: 10px;
 }
 
 .menu ul li a:hover {
-  background-color: #333;
+  background-color: rgb(209, 29, 29);
+  color: #fff;
 }
 </style>
