@@ -1,6 +1,7 @@
 <template>
   <nav class="menu">
     <ul>
+      <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/">Clientes</router-link></li>
       <li><router-link to="/">Pedidos</router-link></li>
     </ul>
@@ -25,6 +26,8 @@ export default {
 .menu ul li a {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 120px;
   min-height: 80px;
   padding: 4px 14px;
   font-size: 16px;

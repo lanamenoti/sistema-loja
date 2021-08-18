@@ -22,21 +22,20 @@
         </div>
         <div class="col-md-6">
           <div class="produto__info">
-            <label for="quantidade">
-              Quantidade
-            </label>
+            <label for="quantidade"> Quantidade </label>
             <input
               type="number"
               v-model="quantidadeProduto"
               @change="calcularValorTotal()"
               id="quantidade"
+              min="0"
             />
           </div>
         </div>
       </div>
       <hr />
       <div class="row">
-        <div class="col-md-12 ">
+        <div class="col-md-12">
           <div class="produto__descricao">
             <h2>Descrição</h2>
             <p>
@@ -67,26 +66,26 @@
 <script>
 export default {
   name: "Produto",
-  data: function() {
+  data: function () {
     return {
       quantidadeProduto: 0,
       valorTotal: 0,
       preco: 39.99,
-    }
+    };
   },
   methods: {
-    calcularValorTotal: function() {
-      this.valorTotal = this.quantidadeProduto * this.preco
+    calcularValorTotal: function () {
+      if (this.quantidadeProduto > 0) {
+        this.valorTotal = this.quantidadeProduto * this.preco;
+      }
     },
   },
-}
+};
 </script>
 <style>
 .produto {
   background: rgba(230, 230, 230, 0.856);
   color: rgb(160, 13, 13);
-
-  /* padding: 10px; */
 }
 .produto h1 {
   margin: 40px;
