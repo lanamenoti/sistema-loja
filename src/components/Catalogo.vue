@@ -121,7 +121,6 @@ export default {
   height: 30px;
   color: #000;
   padding: 12px;
-  align-self: flex-end;
   float: right;
 }
 </style>
