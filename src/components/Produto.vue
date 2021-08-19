@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="produto__pedido">
-            <h2>
+            <h2 v-if="quantidadeValida()">
               Total: {{ quantidadeProduto }} * {{ preco }} = {{ valorTotal }}
             </h2>
             <router-link to="/"
@@ -66,21 +66,23 @@
 <script>
 export default {
   name: "Produto",
-  data: function () {
+  data: function() {
     return {
       quantidadeProduto: 0,
       valorTotal: 0,
       preco: 39.99,
-    };
+    }
   },
   methods: {
-    calcularValorTotal: function () {
-      if (this.quantidadeProduto > 0) {
-        this.valorTotal = this.quantidadeProduto * this.preco;
-      }
+    calcularValorTotal: function() {
+      this.quantidadeProduto > 0 &&
+        (this.valorTotal = this.quantidadeProduto * this.preco)
+    },
+    quantidadeValida: function() {
+      return this.quantidadeProduto >= 0
     },
   },
-};
+}
 </script>
 <style>
 .produto {
